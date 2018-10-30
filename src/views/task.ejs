@@ -1,0 +1,59 @@
+<div class="card">
+    <h5 class="card-header" style="background-color: black; color: white;"><%= task.task_name %></h5>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-sm-8">
+                <div class="row">
+                    <h1 id="project-title" style="margin: auto; text-align: center;"></h1>
+                </div>
+                <div class="row">
+                    <div class="card">
+                        <h5 class="card-header">Görev Açıklaması</h5>
+                        <div class="card-body">
+                            <p class="card-text"><%= task.task_dscr %></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="card">
+                        <h5 class="card-header">Görev Planı</h5>
+                        <div class="card-body">
+                            <a id="project-plan" href="<%= task.task_plan %>">Görev planı dökümanı</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="card">
+                        <h5 class="card-header">Github Deposu</h5>
+                        <div class="card-body">
+                            <a id="project-repo" href="<%= task.task_repo %>">Github'a git</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card">
+                    <h5 class="card-header" style="background-color: black; color: white;">Görev Bilgileri</h5>
+                    <div class="card-body">
+                        <table class="table table-striped">
+                            <tbody>
+                                <tr>
+                                    <td>Görev Durumu:</td>
+                                    <td><%= task.task_status %></td>
+                                </tr>
+                                <tr>
+                                    <td>Proje ID:</td>
+                                    <td><%= task.task_pj_id %></td>
+                                </tr>
+                                <tr>
+                                    <td>Görev Seviyesi:</td>
+                                    <td><%= task.task_diff %></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

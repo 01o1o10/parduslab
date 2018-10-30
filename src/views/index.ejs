@@ -1,0 +1,98 @@
+
+<div id="home-page" class="container">
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#login-modal">
+        Login
+    </button>
+    
+    <!-- Modal -->
+    <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="login-modal-label" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="login-modal-label">Login</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body">
+                <form action="portal" method="POST">
+                    <div class="form-group">
+                        <label for="loginUname">Kullanıcı adı:</label>
+                        <input name="loginUname" type="text" class="form-control" id="loginUname" placeholder="Kullanıcı adı..">
+                    </div>
+                    <div class="form-group">
+                        <label for="loginPass">Parola:</label>
+                        <input name="loginPass" type="password" class="form-control" id="loginPass" placeholder="Parola..">
+                    </div>
+
+                    <% if(error) { %> 
+                        <div class="alert alert-danger" role="alert"><b>Hata </b><%= error %></div>
+                    <% } %>
+
+                    <button type="submit" id="login-submit-button" class="btn btn-primary">Login</button>
+                </form>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#register-modal">
+        Register
+    </button>
+    
+    <!-- Modal -->
+    <div class="modal fade" id="register-modal" tabindex="-1" role="dialog" aria-labelledby="register-modal-label" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="register-modal-label">Register</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="register-fname">Firstname</label>
+                        <input name="register-fname" type="text" class="form-control" id="register-fname" placeholder="Firstname">
+                    </div>
+                    <div class="form-group">
+                        <label for="register-lname">Lastname</label>
+                        <input name="register-lname" type="text" class="form-control" id="register-lname" placeholder="Lastname">
+                    </div>
+                    <div class="form-group">
+                        <label for="register-city">City</label>
+                        <select name="register-city" type="text" class="form-control" id="register-city" placeholder="City">
+                            <option value="1">Adana</option>
+                            <option value="2">Ankara</option>
+                            <option value="3">Istanbul</option>
+                            <option value="41">Kocaeli</option>
+                            <option value="54">Sakarya</option>
+                            <option value="16">Bursa</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-uname">Username</label>
+                        <input name="register-uname" type="text" class="form-control" id="register-uname" placeholder="Username">
+                    </div>
+                    <div class="form-group">
+                        <label for="register-pass">Password</label>
+                        <input name="register-pass" type="password" class="form-control" id="register-pass" placeholder="Password">
+                    </div>
+
+                    <div id="register-succes" style="display: none;" class="alert alert-success" role="alert"></div>
+                    <div id="register-failed" style="display: none;" class="alert alert-danger" role="alert"></div>
+
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" id="register-submit-button" class="btn btn-primary">Register</button>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>

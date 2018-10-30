@@ -1,0 +1,84 @@
+<div class="card">
+    <h5 class="card-header" style="background-color: black; color: white;"><%= project.project_name %></h5>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-sm-8">
+                <div class="row">
+                    <h1 id="project-title" style="margin: auto; text-align: center;"></h1>
+                </div>
+                <div class="row">
+                    <div class="card">
+                        <h5 class="card-header">Proje Açıklaması</h5>
+                        <div class="card-body">
+                            <p class="card-text"><%= project.project_dscr %></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="card">
+                        <h5 class="card-header">Proje Planı</h5>
+                        <div class="card-body">
+                            <a id="project-plan" href="<%= project.project_plan %>">Proje planı dökümanı</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="card">
+                        <h5 class="card-header">Github Deposu</h5>
+                        <div class="card-body">
+                            <a id="project-repo" href="<%= project.project_repo %>">Github'a git</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="card">
+                        <h5 class="card-header">Proje Görevleri</h5>
+                        <div class="card-body">
+                            <div id="project-tasks" class="list-group">
+                                <% for(i in tasks){ %>
+                                    <div class="card">
+                                        <h5 class="card-header"><%= tasks[i].task_name %></h5>
+                                        <div class="card-body">
+                                            <h5 class="card-title"><%= tasks[i].task_dscr.substr(0, 300) %>...</h5>
+                                            <form action="task" method="POST">
+                                                <input type="text" name="taskId" value="<%= tasks[i].task_id %>" style="display: none;">
+                                                <button type="submit" id="<%= tasks[i].task_id %>" class="btn btn-primary">Görev Detayları</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                <% } %>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card">
+                    <h5 class="card-header" style="background-color: black; color: white;">Proje Bilgileri</h5>
+                    <div class="card-body">
+                        <table class="table table-striped">
+                            <tbody>
+                                <tr>
+                                    <td>Proje Durumu:</td>
+                                    <td><%= project.project_status %></td>
+                                </tr>
+                                <tr>
+                                    <td>Proje Sahibi:</td>
+                                    <td><%= project.user_name + ' ' + project.user_lname %></td>
+                                </tr>
+                                <tr>
+                                    <td>Başlangıç Tarihi:</td>
+                                    <td><%= project.project_begin_date.toISOString().slice(0, 10) %></td>
+                                </tr>
+                                <tr>
+                                    <td>Bitiş Tarihi:</td>
+                                    <td><%= project.project_end_date.toISOString().slice(0, 10) %></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

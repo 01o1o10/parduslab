@@ -1,0 +1,36 @@
+<div id="portal-body" class="row">
+    <div class="col-sm-8">
+        <div class="row">
+            <div class="card ">
+                <h2 class="card-header" style="background-color: black; color: white;">En Son Eklenen Projeler</h2>
+                <div class="card-body">
+                    <% for(i in projects){ %>
+                        <div class="card">
+                            <h5 class="card-header"><%= projects[i].project_name %></h5>
+                            <div class="card-body">
+                                <h5 class="card-title"><%= projects[i].project_dscr.substr(0, 300) %>...</h5>
+                                <p class="card-text">Proje Github depos: <a href="<%= projects[i].project_repo %>">Github'a git</a></p>
+                                <form action="project" method="POST">
+                                    <input type="text" name="projectId" value="<%= projects[i].project_id %>" style="display: none;">
+                                    <button type="submit" id="<%= projects[i].project_id %>" class="project-details btn btn-primary">Proje Detayları</button>
+                                </form>
+                            </div>
+                        </div>
+                    <% } %>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="card ">
+            <h2 class="card-header" style="background-color: black; color: white;">Aktif Görevleriniz</h2>
+            <div class="card-body">
+                <div id="user-tasks"  class="list-group">
+                    <% for(i in tasks){ %>
+                        <a href="#" class="list-group-item list-group-item-action"><%= tasks[i].task_name %></a>
+                    <% } %>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

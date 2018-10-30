@@ -1,0 +1,175 @@
+
+/* Always set the map height explicitly to define the size of the div
+* element that contains the map. */
+
+.container {
+    width: 100%;
+    height: 100%;
+}
+/* Optional: Makes the sample page fill the window. */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.head {
+    height: 100px;
+    padding: 25px;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 10px;
+}
+
+.card {
+    width: 100%;
+    margin: 5px;
+}
+
+.card button{
+    float: right;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/***** Navbar *****/
+.navbar {
+    display: block;
+    margin: auto;
+    padding: 0;
+    width: 100%;
+    height: auto;
+    background-color: black;
+}
+
+.nav-item {
+    margin: 0;
+    padding: 0;
+}
+
+.dropdown {
+    border-radius: 10px;
+    width: 100%;
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown *{
+    border-radius: 10px;
+}
+
+.dropbtn {
+    background-color: #000000;
+    color: white;
+    padding: 16px;
+    width: 100%;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.user-button {
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-content {
+    width: 100%;
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#project-body {
+    display: noen;
+}
+
+.circle {
+    margin: 0;
+    padding: 0;
+    height: 10px;
+    width: 10px;
+    border-radius: 10px;
+}
+
+.green {
+    background-color: green;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.red{
+    background-color: red;
+}

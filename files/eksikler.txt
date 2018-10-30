@@ -1,0 +1,4 @@
+Menü kısmındaki başlıklara tıklandığında ilgili kısma kayarak gitmesi
+Kampanyalar kısmının sürekli dönmesi
+modal açıldığında arka pilan bloor olsun modal kapandığında blurluk yokedilsin
+selectleri doldurma kısmı events.js de yapıldı onu ui.js ye taşımak lazım
